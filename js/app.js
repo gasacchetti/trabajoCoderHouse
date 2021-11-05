@@ -66,14 +66,14 @@ formulario.addEventListener(('submit'), () => {
                     <td>${producto.descripcion}</td>
                     <td>${producto.volumen}m3</td>
                     <td>${producto.distancia}km</td>
-                    <td><button class="btn" id="delete-btn">Eliminar</button></td>
+                    <td><button class="btn" id="delete-btn-${contadorItems}">Eliminar</button></td>
                 </tr>
                 
                 `
 
             contenedorProductos.appendChild(tr)   
             
-            let deleteButton = document.getElementById('delete-btn')
+            let deleteButton = document.getElementById(`delete-btn-${contadorItems}`)
 
             deleteButton.addEventListener(('click'), (e) =>{
     
